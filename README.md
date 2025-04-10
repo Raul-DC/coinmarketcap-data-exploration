@@ -18,7 +18,13 @@ Este proyecto utiliza un Jupyter Notebook para obtener, procesar y visualizar da
 Antes de ejecutar el notebook, asegúrate de tener instaladas las dependencias:
 
 ```bash
-pip install pandas matplotlib seaborn requests
+requests==2.31.0
+python-dotenv==1.0.0
+pandas==2.1.0
+seaborn==0.12.2
+matplotlib==3.7.2
+jupyter==1.0.0
+ipykernel==6.25.0
 ```
 
 ---
@@ -56,7 +62,7 @@ os.environ['CMC_API_KEY'] = 'tu_clave_aquí'
 ### 🔁 Automatización del consumo de datos
 Cada minuto se realiza una consulta a la API durante 333 ciclos. Los datos se almacenan y normalizan en un `DataFrame`.
 
-![Vista del DataFrame](images/dataframe-preview.png)
+![image](https://github.com/user-attachments/assets/f55b22f6-30ba-489c-a492-d05ba3125e20)
 
 ### 📊 Visualización Comparativa
 Se grafican los cambios porcentuales por criptomoneda en distintos periodos.
@@ -88,6 +94,7 @@ Este proyecto me permitió:
 ├── 📄 Project-ACAPI.ipynb
 ├── 📄 README.md
 ├── ⚙️ .env
+├── PIP requirements.txt
 └── 📁 images/
     ├── dataframe-preview.png
     ├── percent-change-graph.png
