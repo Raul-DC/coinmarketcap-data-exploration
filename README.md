@@ -1,13 +1,13 @@
-# 📈 Análisis de Criptomonedas con la API de CoinMarketCap
+# 📈 Análisis Automatizado de Criptomonedas con la API de CoinMarketCap
 
-Este proyecto utiliza un Jupyter Notebook para obtener, procesar y visualizar datos de criptomonedas en tiempo real mediante la API de CoinMarketCap. Se aplican técnicas de automatización, transformación y visualización con `pandas`, `matplotlib` y `seaborn`.
+Este proyecto implementa un sistema automatizado de consulta y análisis de datos financieros en tiempo real utilizando la API de CoinMarketCap. Mediante un Jupyter Notebook, se recolectan datos cada minuto durante más de 5 horas para construir un historial confiable de múltiples criptomonedas. Se procesan, transforman y visualizan con técnicas modernas de análisis y visualización de datos.
 
 ---
 
 ## 🚀 Tecnologías Utilizadas
 
 - 🐍 Python 3
-- 📦 Bibliotecas: `pandas`, `requests`, `matplotlib`, `seaborn`, `json`, `os`
+- 📦 Bibliotecas: `pandas`, `requests`, `matplotlib`, `seaborn`, `json`, `os`, `time`
 - 📡 CoinMarketCap API
 - 📊 Jupyter Notebook
 
@@ -15,7 +15,7 @@ Este proyecto utiliza un Jupyter Notebook para obtener, procesar y visualizar da
 
 ## ⚙️ Requisitos
 
-Antes de ejecutar el notebook, asegúrate de tener instaladas las dependencias:
+Antes de ejecutar el notebook, asegúrate de tener las siguientes dependencias instaladas:
 
 ```bash
 requests==2.31.0
@@ -37,7 +37,7 @@ Para proteger tu clave de acceso, el proyecto está configurado para leer la API
 ### Pasos para configurar tu clave:
 
 1. Crea una cuenta gratuita en [CoinMarketCap API](https://coinmarketcap.com/api/).
-2. Obtén tu clave (API Key).
+2. Obtén tu API Key.
 3. Guarda la clave en una variable de entorno llamada `CMC_API_KEY`. Por ejemplo:
 
 **En Linux/macOS:**
@@ -58,33 +58,37 @@ os.environ['CMC_API_KEY'] = 'tu_clave_aquí'
 
 ---
 
-## 🧠 Descripción del Notebook
+## ⚙️ Características Técnicas Clave
 
-### 🔁 Automatización del consumo de datos
-Cada minuto se realiza una consulta a la API durante 333 ciclos. Los datos se almacenan y normalizan en un `DataFrame`.
+- 🔁 **Automatización completa del consumo de datos**: Se realizan 333 solicitudes a intervalos de 60 segundos, acumulando más de 5 horas de observaciones.
+- 📥 **Consumo seguro de API**: Validación del estado de respuesta (`status_code`) antes de procesar cada llamada.
+- 🧹 **Transformación avanzada con pandas**: Normalización de datos JSON, selección de campos relevantes, renombrado y pivoteo de columnas.
+- 📊 **Visualización multivariable**: Comparación de porcentajes de cambio entre criptomonedas, análisis de tendencia de Bitcoin.
+- 💾 **Almacenamiento estructurado** (opcional): Los datos pueden guardarse como CSV o Excel para análisis posterior.
+- 🛑 **Control de errores y robustez**: Manejador de excepciones para evitar bloqueos por respuestas inválidas o fallos de red.
 
-![image](https://github.com/user-attachments/assets/83806bea-55f8-4527-b4f4-b44a0d42bf22)
+---
 
-### 📊 Visualización Comparativa
-Se grafican los cambios porcentuales por criptomoneda en distintos periodos.
-
-![image](https://github.com/user-attachments/assets/43b81c52-1966-4301-9975-524828ad80ae)
+## 📊 Resultados Visuales
 
 ### 📈 Evolución del Precio de Bitcoin
-Gráfico de línea con el historial del precio de Bitcoin.
+Gráfico de líneas que muestra la evolución temporal del precio de BTC en intervalos de 1 minuto.
 
 ![image](https://github.com/user-attachments/assets/97abc027-db81-4fa9-8ea7-79c1bd0e6c5d)
 
 ---
 
-## 📌 Conclusiones
+### 📊 Comparativa de Porcentajes de Cambio
+Visualización comparativa entre criptomonedas (BTC, ETH, ADA, etc.) con sus variaciones porcentuales en distintos periodos.
 
-Este proyecto me permitió:
+![image](https://github.com/user-attachments/assets/1fbdb77d-e76b-4009-8227-f985c75fea27)
 
-- Automatizar llamadas a APIs externas.
-- Trabajar con datos en formato JSON.
-- Aplicar transformaciones avanzadas con `pandas`.
-- Visualizar datos financieros con claridad.
+---
+
+### 🧾 Previsualización del Dataset
+Vista previa del DataFrame normalizado tras recolectar los datos desde la API.
+
+![image](https://github.com/user-attachments/assets/83806bea-55f8-4527-b4f4-b44a0d42bf22)
 
 ---
 
@@ -95,12 +99,24 @@ Este proyecto me permitió:
 ├── 📄 Project-ACAPI.ipynb
 ├── 📄 README.md
 ├── ⚙️ .env
-├── PIP requirements.txt
+├── 📄 requirements.txt
 └── 📁 images/
     ├── dataframe-preview.png
     ├── percent-change-graph.png
     └── bitcoin-lineplot.png
 ```
+
+---
+
+## 📌 Conclusiones
+
+Este proyecto me permitió:
+
+- Dominar el consumo de APIs externas con autenticación.
+- Automatizar procesos de recolección de datos a intervalos de tiempo definidos.
+- Trabajar con estructuras complejas como respuestas JSON anidadas.
+- Visualizar datos financieros de forma clara y efectiva.
+- Fortalecer habilidades en transformación de datos con `pandas`.
 
 ---
 
@@ -112,7 +128,7 @@ Este proyecto me permitió:
 
 ## 📬 Contacto
 
-¿Tienes dudas o sugerencias? ¡Contáctame por GitHub o LinkedIn!
-
+¿Tienes dudas, sugerencias o ideas para extender el proyecto?  
+¡Contáctame por [GitHub](https://github.com/) o [LinkedIn](https://www.linkedin.com/in/raul-dc/)!
 
 ---
