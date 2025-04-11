@@ -20,6 +20,7 @@ Antes de ejecutar el notebook, asegúrate de tener instaladas las dependencias:
 ```bash
 requests==2.31.0
 python-dotenv==1.0.0
+numpy==1.26.0
 pandas==2.1.0
 seaborn==0.12.2
 matplotlib==3.7.2
@@ -62,17 +63,17 @@ os.environ['CMC_API_KEY'] = 'tu_clave_aquí'
 ### 🔁 Automatización del consumo de datos
 Cada minuto se realiza una consulta a la API durante 333 ciclos. Los datos se almacenan y normalizan en un `DataFrame`.
 
-![image](https://github.com/user-attachments/assets/f55b22f6-30ba-489c-a492-d05ba3125e20)
+![image](https://github.com/user-attachments/assets/83806bea-55f8-4527-b4f4-b44a0d42bf22)
 
 ### 📊 Visualización Comparativa
 Se grafican los cambios porcentuales por criptomoneda en distintos periodos.
 
-![Gráfico de puntos](images/percent-change-graph.png)
+![image](https://github.com/user-attachments/assets/43b81c52-1966-4301-9975-524828ad80ae)
 
 ### 📈 Evolución del Precio de Bitcoin
 Gráfico de línea con el historial del precio de Bitcoin.
 
-![Gráfico de Bitcoin](images/bitcoin-lineplot.png)
+![image](https://github.com/user-attachments/assets/97abc027-db81-4fa9-8ea7-79c1bd0e6c5d)
 
 ---
 
